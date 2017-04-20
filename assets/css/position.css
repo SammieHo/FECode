@@ -1,0 +1,225 @@
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.relative {
+    position: relative;
+}
+
+.absolute-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.absolute-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.absolute-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.absolute-bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.fixed-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.fixed-bottom-right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-column {
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    flex-direction: column
+}
+
+.flex-wrap {
+    flex-wrap: wrap
+}
+
+.items-start {
+    align-items: flex-start
+}
+
+.items-end {
+    align-items: flex-end
+}
+
+.items-center {
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    box-align: center;
+    align-items: center
+}
+
+.items-baseline {
+    align-items: baseline
+}
+
+.items-stretch {
+    align-items: stretch
+}
+
+.self-start {
+    align-self: flex-start
+}
+
+.self-end {
+    align-self: flex-end
+}
+
+.self-center {
+    align-self: center
+}
+
+.self-baseline {
+    align-self: baseline
+}
+
+.self-stretch {
+    align-self: stretch
+}
+
+.justify-start {
+    justify-content: flex-start
+}
+
+.justify-end {
+    justify-content: flex-end
+}
+
+.justify-center {
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    box-pack: center;
+    justify-content: center
+}
+
+.justify-between {
+    -moz-box-align: justify;
+    -webkit-box-align: justify;
+    box-pack: justify;
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around
+}
+
+.content-start {
+    align-content: flex-start
+}
+
+.content-end {
+    align-content: flex-end
+}
+
+.content-center {
+    align-content: center
+}
+
+.content-between {
+    align-content: space-between
+}
+
+.content-around {
+    align-content: space-around
+}
+
+.content-stretch {
+    align-content: stretch
+}
+
+
+/* 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893 */
+
+.flex-auto {
+    flex: 1 1 auto;
+    min-width: 0;
+    /* 1 */
+    min-height: 0;
+    /* 1 */
+}
+
+.flex-none {
+    flex: none
+}
+
+.order-0 {
+    order: 0
+}
+
+.order-1 {
+    order: 1
+}
+
+.order-2 {
+    order: 2
+}
+
+.order-3 {
+    order: 3
+}
+
+.order-last {
+    order: 99999
+}
+
+.margin-auto{
+    margin: 0 auto;
+}

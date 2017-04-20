@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../assets/css/reset.css">
+	<link rel="stylesheet" href="../../assets/css/iconfont.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<form action="UploadCourse.php" method="post"  class="modify" enctype="multipart/form-data">
+		<h2>课程上传</h2>
+		<fieldset>
+			<label>
+				课程标题：
+				<input type="text" name="title">
+			</label>
+		</fieldset>
+		<fieldset>
+			<label class="ver-top">
+				课程简介：
+				<textarea name="desc" id=""></textarea>
+			</label>
+		</fieldset>
+		<fieldset>
+			<label class="ver-top">
+				课程类别：
+				<select name="class" id="">
+					<option value="">请选择</option>
+					<option value="HTML/CSS">HTML/CSS</option>
+					<option value="HTML5">HTML5</option>
+					<option value="CSS3">CSS3</option>
+					<option value="Javascript">Javascript</option>
+					<option value="jQuery">jQuery</option>
+					<option value="Bootstrap">Bootstrap</option>
+					<option value="Sass">Sass</option>
+					<option value="Vue.js">Vue.js</option>
+					<option value="React.js">React.js</option>
+					<option value="Node.js">Node.js</option>
+					<option value="Tool">Tool</option>
+				</select>
+			</label>
+		</fieldset>
+		<fieldset>
+			<label class="ver-top">
+				难度级别：
+				<select name="level" id="">
+					<option value="">请选择</option>
+					<option value="0">基础</option>
+					<option value="1">提高</option>
+				</select>
+			</label>
+		</fieldset>
+		<fieldset>
+			<label>
+				缩略图示：
+				<input type="file" name="photo" accept="image/*" capture>
+			</label>
+		</fieldset>
+		<fieldset>
+			<label>
+				上传视频：
+				<input type="file" name="video" accept="video/*" capture>
+			</label>
+		</fieldset>
+		<button type="submit">上传</button>
+	</form>
+</body>
+</html>

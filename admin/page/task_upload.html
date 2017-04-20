@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../assets/css/reset.css">
+	<link rel="stylesheet" href="../../assets/css/iconfont.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<form action="UploadTask.php"  class="modify" method="post" enctype="multipart/form-data">
+		<h2>任务发布</h2>
+		<fieldset>
+			<label>
+				任务天数：<span>1</span>
+				<!-- <input type="text"> -->
+			</label>
+		</fieldset>
+		<fieldset>
+			<label>
+				任务标题：
+				<input type="text" name="title">
+			</label>
+		</fieldset>
+		<fieldset>
+			<label class="ver-top">
+				任务描述：
+				<textarea name="desc" id="" ></textarea>
+			</label>
+		</fieldset>
+		<fieldset>
+			<label>
+				参考图示：
+				<input type="file" name="File" accept="image/*" capture>
+			</label>
+		</fieldset>
+		
+		<button type="submit">发布</button>
+	</form>
+</body>
+</html>

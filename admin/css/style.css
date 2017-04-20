@@ -1,0 +1,151 @@
+body {
+    font-size: 14px;
+}
+.ver-top{
+	vertical-align: top;
+}
+
+header {
+    font-size: 32px;
+    background: #8fd3fe;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 20px;
+    width: 100%;
+    color: #fff;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.nav li {
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 18px;
+    line-height: 2.5;
+    padding-left: 16px;
+}
+
+.nav li a {
+    display: block;
+}
+
+.nav .des {
+    font-size: 14px;
+}
+
+
+/* table */
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #e5e2e2;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+th,
+td {
+    height: 32px;
+    border-right: 1px solid #e5e2e2;
+    padding: 0 10px;
+}
+
+th {
+    background: $gray-color11;
+    border-bottom: 1px solid #e5e2e2;
+    text-align: left;
+}
+
+td a {
+    padding-right: 16px;
+}
+
+tr:nth-child(even) {
+    background: #d7edfa;
+}
+
+.edit {
+    color: #ddd;
+}
+
+
+/* search */
+
+.search {
+    border-color: #666;
+    padding-left: 10%;
+    margin-top: 20px;
+}
+
+.search .search-input {
+    border-color: $gray-color12;
+    width: 212px;
+    margin: 10px 30px 8px 4px;
+}
+
+.search .search-input input[type="text"] {
+    height: 30px;
+}
+
+.search .search-input .icon {
+    font-size: 18px;
+    margin-top: 4px;
+    color: #01b9d1;
+    cursor: pointer;
+}
+
+select,
+input[type="text"],
+input[type="password"]{
+	border: 1px solid #666;
+	padding: 5px 10px;
+}
+button[type="submit"]{
+	background: #8fd3fe;
+	border: 0;
+	padding: 5px 10px;
+	color: #fff;
+}
+
+/* modify */
+.modify{
+	margin: 0 20%;
+	margin-top: 40px;
+}
+.modify fieldset{
+	margin-bottom: 20px;
+}
+.modify textarea,
+.modify input[type="text"]{
+	width: 80%;
+}
+.modify h2{
+	margin-bottom: 30px;
+}
+
+/* pages */
+.pages{
+	margin-left: 10%;
+	margin-top: 40px;
+}
+.pages a{
+	padding: 5px 10px;
+	margin-right: 5px;
+	border: 1px solid #333;
+	color: #333;
+}
+.pages a.active{
+	background: #03A9F4;
+	border-color: #03A9F4;
+	color: #fff;
+}
+.pages a.cancel{
+	border-color: #bbb;
+	color: #bbb;
+}
+

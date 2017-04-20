@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="browsermode" content="application">
+    <meta name="format-detection" content="telephone=no" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/sign.css">
+</head>
+
+<body>
+
+    <div class="sign-form">
+        <div class="thumbnail">
+          <img src="../assets/images/fe_circle.png" alt="">
+        </div>
+
+        <form name="SignIn" class="register-form" action="Sign/Sign.php?ctrl=0" method="POST">
+            <input type="text" name="username" placeholder="用户名" data-rule="用户名: required;username"/>
+            <input type="password" name="password" placeholder="密码" data-rule="密码: required;password" />
+            <input type="text" name="email" placeholder="邮箱地址" data-rule="电子邮箱: required;email"/>
+            <input type="submit" name="submit" value="注册" />
+            <p class="message">已有账号? <a href="#">登录</a></p>
+        </form>
+
+        <form name="Login" class="login-form" action="Sign/Sign.php?ctrl=1" method="POST">
+            <input type="text" name="login-user" placeholder="用户名" data-rule="用户名: required;username"/>
+            <input type="password" name="login-pwd" placeholder="密码" data-rule="密码: required;password" />
+            <input type="submit" name="submit" value="登录" />
+            <p class="message">没有账号? <a href="#">注册</a></p>
+        </form>
+    </div>
+
+    <script src='../assets/js/jquery-3.2.1.min.js'></script>
+    <script src="../assets/js/jquery.validator.min.js"></script>
+    <script src="../assets/js/zh-CN.js"></script>
+    <script>
+      $('.message a').click(function() {
+          $('form').animate({
+              height: "toggle",
+              opacity: "toggle"
+          }, "slow");
+      });
+    </script>
+</body>
+
+</html>

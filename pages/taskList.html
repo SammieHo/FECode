@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务导航栏</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="x5-page-mode" content="app" />
+    <meta name="browsermode" content="application">
+    <meta name="format-detection" content="telephone=no" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/position.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/border.css">
+    <link rel="stylesheet" href="../assets/css/button.css">
+    <link rel="stylesheet" href="../assets/css/color.css">
+    <link rel="stylesheet" href="../assets/css/iconfont.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/sweetalert.css">
+    <script src="../assets/js/video.min.js"></script>
+</head>
+
+<body>
+    <div id="app" class="task" v-lock>
+        <header class="bg-blue" v-if="tab != 2">
+            <div class="col-8 inline-block title">
+                <a href="#" class="padding-24 inline-block">
+                    <i class="iconfont icon-fanhui"></i> 返回
+                </a>
+                <h2 v-if="tab == 1">100 Days Coding</h2>
+                <h2 v-if="tab == 3">排行榜</h2>
+                <div v-if="tab == 3">您已提交3次代码</div>
+            </div>
+            <img src="../assets/images/appraciate.png" alt="" class="col-3 inline-block appracite">
+        </header>
+        <!-- tab -->
+        <ul class="tab task-tab flex justify-around">
+            <li class="relative" :class="tab == 1 ? 'active' : ''" v-on:click=" tab = 1 ">
+                每日
+            </li>
+            <li class="relative" :class="tab == 2 ? 'active' : ''" v-on:click=" tab = 2 ">最新</li>
+            <li class="relative" :class="tab == 3 ? 'active' : ''" v-on:click=" tab = 3 ">排行榜</li>
+        </ul>
+        <!-- 每日 -->
+        <section v-if="tab == 1" class="day-coding">
+            <div class="day font-blue">
+                <span>51</span>天
+            </div>
+
+            <div class="title inline-block margin-bottom">
+                理解Flexbox：你需要知道的一切
+            </div>
+
+            <h3 class="margin-bottom-24">任务描述：</h3>
+            <p class="margin-bottom-24">运用Flexbox模块所有基本概念，做一个UI界面布局。</p>
+            <h3 class="margin-bottom-24">参考资料：</h3>
+            <ul class="margin-bottom-24 font-blue">
+                <li>
+                    <a href="#" class="block">· 理解Flexbox：你需要知道的一切</a>
+                </li>
+                <li>
+                    <a href="#" class="block">· 理解Flexbox：你需要知道的一切</a>
+                </li>
+            </ul>
+            <h3>参考图</h3>
+            <img src="../assets/images/flexbox.png" alt="">
+            <footer class="fixed-bottom block col-12 fixed-btn" v-on:click="code">
+                <a href="#" class="block text-center">提交任务</a>
+            </footer>
+        </section>
+
+        <!-- 最新 -->
+        <section v-if="tab == 2" class="task-list">
+            <a href="#" class="relative block col-12 task-list-block " v-for="i in 5" style="background: url('../assets/images/Layer2.png') no-repeat center;">
+                <div class="task-day inline-block">
+                    第<span>1</span>天
+                </div>
+                <div class="dispersion-btn col-8 margin-auto flex justify-between task-list-btn">
+                    <span>界面布局练习</span>
+                    <span class="text-right">7563人提交</span>
+                </div>
+            </a>
+            <footer class="footer-bar fixed-bottom col-12">
+                <ul class="flex justify-between">
+                    <li class="col-3 text-center">
+                        <a href="#" class="block">
+                            <i class="sprite sprite-home"></i>
+                            <div class="text">首页</div>
+                        </a>
+                    </li>
+                    <li class="col-3 text-center">
+                        <a href="#" class="block">
+                            <i class="sprite sprite-course"></i>
+                            <div class="text">课程</div>
+                        </a>
+                    </li>
+                    <li class="col-3 text-center">
+                        <a href="#" class="block">
+                            <i class="sprite sprite-task active"></i>
+                            <div class="text">任务</div>
+                        </a>
+                    </li>
+                    <li class="col-3 text-center">
+                        <a href="#" class="block">
+                            <i class="sprite sprite-mine"></i>
+                            <div class="text">我的</div>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </section>
+
+        <!-- 排行榜 -->
+        <section v-if="tab == 3" class="task-list task-rank">
+            <ul>
+                <li class="border-bottom padding-24" v-for="i in 10">
+                    <i class="iconfont icon-diyiming" v-if="i == 1"></i>
+                    <i class="iconfont icon-dierming" v-if="i == 2"></i>
+                    <i class="iconfont icon-disanming" v-if="i == 3"></i>
+                    <img src="../assets/images/man.png" alt="">
+                    <span class="name">贺呵呵</span>
+                    <span class="right">提交<b>100</b>次</span>
+                </li>
+            </ul>
+            <footer class="footer-bar fixed-bottom col-12">
+                <ul class="flex justify-between">
+                    <li class="col-3 text-center">
+                        <a href="#" class="block">
+                            <i class="sprite sprite-home"></i>
+                            <div class="text">首页</div>
+                        </a>
+                    </li>
+                    <li class="col-3 text-center">
+                        <a href="#" class="block">
+                            <i class="sprite sprite-course"></i>
+                            <div class="text">课程</div>
+                        </a>
+                    </li>
+                    <li class="col-3 text-center">
+                        <a href="#" class="block">
+                            <i class="sprite sprite-task active"></i>
+                            <div class="text">任务</div>
+                        </a>
+                    </li>
+                    <li class="col-3 text-center">
+                        <a href="#" class="block">
+                            <i class="sprite sprite-mine"></i>
+                            <div class="text">我的</div>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </section>
+    </div>
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/sweetalert.min.js"></script>
+    <script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            tab: 3
+        },
+        methods: {
+            code: function() {
+                swal({
+                        title: "提交代码",
+                        text: "请输入网址:",
+                        type: "input",
+                        showCancelButton: true,
+                        closeOnConfirm: false,
+                        animation: "slide-from-top",
+                        inputPlaceholder: "http://codepen.io"
+                    },
+                    function(inputValue) {
+                        if (inputValue === false) return false;
+
+                        if (inputValue === "") {
+                            swal.showInputError("请输入正确的网址");
+                            return false
+                        }
+
+                        swal("Nice!", "你提交的代码地址 :\n" + inputValue, "success");
+                    });
+            }
+        },
+        computed: {
+
+        }
+    });
+    </script>
+</body>
+
+</html>

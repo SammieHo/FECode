@@ -1,0 +1,126 @@
+.sprite {
+    background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+}
+.sprite-course {
+    background-position: 0 0;
+}
+
+.sprite-course.active {
+    background-position: -46px 0;
+}
+
+.sprite-home {
+    background-position: -92px 0;
+}
+
+.sprite-home.active {
+    background-position: -138px 0;
+}
+
+.sprite-mine {
+    background-position: -184px 0;
+}
+
+.sprite-mine.active {
+    background-position: -230px 0;
+}
+
+.sprite-task {
+    background-position: -276px 0;
+}
+
+.sprite-task.active {
+    background-position: -322px 0;
+}
+
+@media screen and (max-width: 442px) {
+    .sprite {
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/spritex2.png);
+    }
+
+    .sprite-course {
+        background-position: 0 0;
+    }
+
+    .sprite-course.active {
+        background-position: -24px 0;
+    }
+
+    .sprite-home {
+        background-position: -48px 0;
+    }
+
+    .sprite-home.active {
+        background-position: -72px 0;
+    }
+
+    .sprite-mine {
+        background-position: -96px 0;
+    }
+
+    .sprite-mine.active {
+        background-position: -120px 0;
+    }
+
+    .sprite-task {
+        background-position: -144px 0;
+    }
+
+    .sprite-task.active {
+        background-position: -168px 0;
+    }
+}
+
+@font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot?t=1492389974845'); /* IE9*/
+  src: url('../font/iconfont.eot?t=1492389974845#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff?t=1492389974845') format('woff'), /* chrome, firefox */
+  url('../font/iconfont.ttf?t=1492389974845') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg?t=1492389974845#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search1:before { content: "\e66b"; }
+
+.icon-shouyezhuyetubiao04:before { content: "\e603"; }
+
+.icon-shijian:before { content: "\e60c"; }
+
+.icon-fanhui:before { content: "\e62e"; }
+
+.icon-dierming:before { content: "\e60b"; }
+
+.icon-disanming:before { content: "\e60d"; }
+
+.icon-diyiming:before { content: "\e60e"; }
+
+.icon-bofang:before { content: "\e606"; }
+
+.icon-bofang1:before { content: "\e62f"; }
+
+.icon-task-copy:before { content: "\e631"; }
+
+.icon-mes:before { content: "\e601"; }
+
+.icon-account:before { content: "\e604"; }
+
+.icon-myinfo:before { content: "\e607"; }
+
+.icon-help:before { content: "\e608"; }
+
+.icon-allorder:before { content: "\e609"; }
+
+.icon-index-course:before { content: "\e61e"; }
+
+.icon-index-task:before { content: "\e61f"; }

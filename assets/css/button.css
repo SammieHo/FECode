@@ -1,0 +1,21 @@
+.dispersion-btn {
+    width: 85%;
+    background: #7cc8ff;
+    box-shadow: 0 0 6px #7cc8ff;
+    border-radius: .1rem;
+    padding: .14rem .5rem;
+    font-size: .26rem;
+    color: #fff;
+}
+
+.fixed-btn {
+    background: #ff8680;
+    color: #fff;
+    padding: .3rem 0;
+}
+
+.red-btn {
+    background: #ff8680;
+    color: #fff;
+    padding: .1rem;
+}
